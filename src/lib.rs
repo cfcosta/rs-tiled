@@ -932,10 +932,10 @@ impl Object {
     }
 }
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, Copy)]
 pub struct Frame {
-    tile_id: u32,
-    duration: u32,
+    pub tile_id: u32,
+    pub duration: u32,
 }
 
 impl Frame {
