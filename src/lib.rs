@@ -195,6 +195,13 @@ impl PropertyValue {
             ))),
         }
     }
+
+    fn inner_int(&self) -> Option<i32> {
+        match self {
+            PropertyValue::IntValue(i) => Some(*i),
+            _ => None,
+        }
+    }
 }
 
 pub type Properties = HashMap<String, PropertyValue>;
